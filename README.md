@@ -65,4 +65,4 @@ To connect your Database remotely using a Database Manager application, please u
 - Port: 3306
 - User: remote
 - Password: Related123
-- Schema: messenger
+- Database: messenger
