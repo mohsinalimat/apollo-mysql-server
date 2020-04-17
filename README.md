@@ -49,9 +49,9 @@ Node.js server with Apollo GraphQL and MySQL.
 32. Install the predefined packages using<br>`npm install`
 33. Install PM2 using<br>`npm install pm2 -g`
 34. Start the Apollo server with<br>`pm2 start index.js`
-34. Or start the Apollo server with custom settings using<br>`node index.js --port 3001 --user remote --password Related123 --database messenger --databasePort 3306`
+35. Or you can start the Apollo server with custom settings using<br>`node index.js --port 3001 --user remote --password Related123 --database messenger --databasePort 3306`
 
-35. You can exit from the droplet using<br>`exit`
+36. You can exit from the droplet using<br>`exit`
 
 ## Apollo GraphQL admin page
 
