@@ -6,12 +6,6 @@
  */
 import Sequelize from 'sequelize';
 import _ from 'lodash';
-const args = require('minimist')(process.argv.slice(2), {
-  string: 'database',
-  string: 'user',
-  string: 'password',
-  int: 'databasePort'
-});
 import { createFriend } from './tables/Friend';
 import { createPerson } from './tables/Person';
 import { createBlocked } from './tables/Blocked';
@@ -27,17 +21,11 @@ import { createSingle } from './tables/Single';
  * Database Connection
  * 
  */
-const database = args.database || 'messenger';
-const user = args.user || 'remote';
-const password = args.password || 'Related123';
-const port = args.databasePort || 3306;
-
 const Conn = new Sequelize(
-  database,
-  user,
-  password,
+  'messenger',
+  'root',
+  'Related123',
   {
-    port: port,
     dialect: 'mysql',
     host: 'localhost'
   }

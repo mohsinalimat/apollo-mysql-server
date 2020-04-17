@@ -9,7 +9,6 @@ const {
 const Op = require('sequelize').Op;
 const { merge } = require('lodash');
 const pubsub = new PubSub();
-const args = require('minimist')(process.argv.slice(2));
 
 /***
  * 
@@ -140,7 +139,7 @@ const schema = makeExecutableSchema({
  * 
  * Apollo Server Constructor
  */
-const apolloServer = new ApolloServer({
+const server = new ApolloServer({
   schema  
 });
 
@@ -149,7 +148,7 @@ const apolloServer = new ApolloServer({
  * Apollo Server Initiator
  */
 
-let port = args['port'] | 3001
+let port = process.argv[2] | 3001
 
-apolloServer.listen(port).then(({ url }) => console.log(`Server running at ${ url } and subscriptions at ${ apolloServer.subscriptionsPath }`));
+server.listen(port).then(({ url }) => console.log(`Server running at ${ url } and subscriptions at ${ server.subscriptionsPath }`));
 
