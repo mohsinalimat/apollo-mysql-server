@@ -27,7 +27,7 @@ import { createSingle } from './tables/Single';
  * Database Connection
  * 
  */
-const database = args.database || 'relatedmessenger';
+const database = args.database || 'messenger';
 const user = args.user || 'remote';
 const password = args.password || 'Related123';
 const port = args.databasePort || 3306;
