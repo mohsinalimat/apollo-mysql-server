@@ -1,0 +1,55 @@
+## Friend
+subscription Friend($userId: String!) {
+  object: friend(userId: $userId) {
+    objectId, userId, friendId, isDeleted, createdAt, updatedAt
+  }  
+}
+
+## Person
+subscription Person($updatedAt: Int!) {
+  object: person(updatedAt: $updatedAt) {
+    email, phone, firstname, lastname, fullname, country, location, pictureAt, status, keepMedia, networkPhoto, networkVideo, networkAudio, wallpaper, loginMethod, oneSignalId, lastActive, lastTerminate, createdAt, updatedAt
+  }
+}
+
+## Blocked
+subscription Blocked($blockedId: String, $blockerId: String) {
+  object: blocked(blockedId: $blockedId, blockerId: $blockerId) {
+    objectId, blockerId, blockedId, isDeleted, createdAt, updatedAt
+  }
+}
+
+## Detail
+subscription Detail($chatIds: [String]!) {
+  object: detail(chatIds: $chatIds) {
+    objectId, chatId, userId, typing, lastRead, mutedUntil, isDeleted, isArchived, createdAt, updatedAt
+  }
+}
+
+## Group
+subscription Group($chatIds: [String]!) {
+  object: group(chatIds: $chatIds) {
+    objectId, chatId, name, ownerId, isDeleted, createdAt, updatedAt
+  }
+}
+
+## Member
+subscription Member($chatIds: [String]!) {
+  object: member(chatIds: $chatIds) {
+    objectId, chatId, userId, isActive, createdAt, updatedAt
+  }
+}
+
+## Message
+subscription Message($chatIds: [String]!, $updatedAt: Int!) {
+  object: message(chatIds: $chatIds, updatedAt: $updatedAt) {
+    objectId, chatId, userId, userFullname, userInitials, userPictureAt, type, text, photoWidth, photoHeight, videoDuration, audioDuration, latitude, longitude, isMediaQueued, isMediaFailed, isDeleted, createdAt, updatedAt
+  }
+}
+
+## Single
+subscription Single($userId1: String, $userId2: String) {
+  object: single(userId1: $userId1, userId2: $userId2) {
+    objectId, chatId, userId1, fullname1, initials1, pictureAt1, userId2, fullname2, initials2, pictureAt2, createdAt, updatedAt
+  }
+}

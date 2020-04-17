@@ -1,0 +1,103 @@
+## Friend
+mutation InsertFriend($objectId: String!, $userId: String!, $friendId: String!, $isDeleted: Boolean!, $createdAt: Int!, $updatedAt: Int!) { 
+  insertFriend(objectId: $objectId, userId: $userId, friendId: $friendId, isDeleted: $isDeleted, createdAt: $createdAt, updatedAt: $updatedAt) {
+    objectId, userId, friendId, isDeleted, createdAt, updatedAt
+   }
+}
+
+mutation UpdateFriend($objectId: String!, $userId: String!, $friendId: String!, $isDeleted: Boolean!, $createdAt: Int!, $updatedAt: Int!) {
+  updateFriend(objectId: $objectId, userId: $userId, friendId: $friendId, isDeleted: $isDeleted, createdAt: $createdAt, updatedAt: $updatedAt) {
+    objectId, userId, friendId, isDeleted, createdAt, updatedAt
+  }
+}
+
+## Person
+mutation InsertPerson($email: String!, $phone: String!, $firstname: String!, $lastname: String!, $fullname: String!, $country: String!, $location: String!, $pictureAt: Int!, $status: String!, $keepMedia: Int!, $networkPhoto: Int!, $networkVideo: Int!, $networkAudio: Int!, $wallpaper: String!, $loginMethod: String!, $oneSignalId: String!, $lastActive: Int!, $lastTerminate: Int!, $createdAt: Int!, $updatedAt: Int!) {
+  insertPerson(email: $email, phone: $phone, firstname: $firstname, lastname: $lastname, fullname: $fullname, country: $country, location: $location, pictureAt: $pictureAt, status: $status, keepMedia: $keepMedia, networkPhoto: $networkPhoto, networkVideo: $networkVideo, networkAudio: $networkAudio, wallpaper: $wallpaper, loginMethod: $loginMethod, oneSignalId: $oneSignalId, lastActive: $lastActive, lastTerminate: $lastTerminate, createdAt: $createdAt, updatedAt: $updatedAt) {
+    email, phone, firstname, lastname, fullname, country, location, pictureAt, status, keepMedia, networkPhoto, networkVideo, networkAudio, wallpaper, loginMethod, oneSignalId, lastActive, lastTerminate, createdAt, updatedAt
+  }
+}
+
+mutation UpdatePerson($email: String!, $phone: String!, $firstname: String!, $lastname: String!, $fullname: String!, $country: String!, $location: String!, $pictureAt: Int!, $status: String!, $keepMedia: Int!, $networkPhoto: Int!, $networkVideo: Int!, $networkAudio: Int!, $wallpaper: String!, $loginMethod: String!, $oneSignalId: String!, $lastActive: Int!, $lastTerminate: Int!, $createdAt: Int!, $updatedAt: Int!) {
+  updatePerson(email: $email, phone: $phone, firstname: $firstname, lastname: $lastname, fullname: $fullname, country: $country, location: $location, pictureAt: $pictureAt, status: $status, keepMedia: $keepMedia, networkPhoto: $networkPhoto, networkVideo: $networkVideo, networkAudio: $networkAudio, wallpaper: $wallpaper, loginMethod: $loginMethod, oneSignalId: $oneSignalId, lastActive: $lastActive, lastTerminate: $lastTerminate, createdAt: $createdAt, updatedAt: $updatedAt) {
+    email, phone, firstname, lastname, fullname, country, location, pictureAt, status, keepMedia, networkPhoto, networkVideo, networkAudio, wallpaper, loginMethod, oneSignalId, lastActive, lastTerminate, createdAt, updatedAt
+  }
+}
+
+## Blocked
+mutation InsertBlocked($objectId: String!, $blockerId: String!, $blockedId: String!, $isDeleted: Boolean!, $createdAt: Int!, $updatedAt: Int!) {
+  insertBlocked(objectId: $objectId, blockerId: $blockerId, blockedId: $blockedId, isDeleted: $isDeleted, createdAt: $createdAt, updatedAt: $updatedAt) {
+    objectId, blockerId, blockedId, isDeleted, createdAt, updatedAt
+  }
+}
+
+mutation UpdateBlocked($objectId: String!, $blockerId: String!, $blockedId: String!, $isDeleted: Boolean!, $createdAt: Int!, $updatedAt: Int!) {
+  updateBlocked(objectId: $objectId, blockerId: $blockerId, blockedId: $blockedId, isDeleted: $isDeleted, createdAt: $createdAt, updatedAt: $updatedAt) {
+    objectId, blockerId, blockedId, isDeleted, createdAt, updatedAt
+  }
+}
+
+## Detail
+mutation InsertDetail($objectId: String!, $chatId: String!, $userId: String!, $typing: Boolean!, $lastRead: Int!, $mutedUntil: Int!, $isDeleted: Boolean!, $isArchived: Boolean!, $createdAt: Int!, $updatedAt: Int!) {
+  insertDetail(objectId: $objectId, chatId: $chatId, userId: $userId, typing: $typing, lastRead: $lastRead, mutedUntil: $mutedUntil, isDeleted: $isDeleted, isArchived: $isArchived, createdAt: $createdAt, updatedAt: $updatedAt) {
+    objectId, chatId, userId, typing, lastRead, mutedUntil, isDeleted, isArchived, createdAt, updatedAt
+  }
+}
+
+mutation UpdateDetail($objectId: String!, $chatId: String!, $userId: String!, $typing: Boolean!, $lastRead: Int!, $mutedUntil: Int!, $isDeleted: Boolean!, $isArchived: Boolean!, $createdAt: Int!, $updatedAt: Int!) {
+  updateDetail(objectId: $objectId, chatId: $chatId, userId: $userId, typing: $typing, lastRead: $lastRead, mutedUntil: $mutedUntil, isDeleted: $isDeleted, isArchived: $isArchived, createdAt: $createdAt, updatedAt: $updatedAt) {
+    objectId, chatId, userId, typing, lastRead, mutedUntil, isDeleted, isArchived, createdAt, updatedAt
+  }
+}
+
+## Group
+mutation InsertGroup($objectId: String!, $chatId: String!, $name: String!, $ownerId: String!, $isDeleted: Boolean!, $createdAt: Int!, $updatedAt: Int!) {
+  insertGroup(objectId: $objectId, chatId: $chatId, name: $name, ownerId: $ownerId, isDeleted: $isDeleted, createdAt: $createdAt, updatedAt: $updatedAt) {
+    objectId, chatId, name, ownerId, isDeleted, createdAt, updatedAt
+  }
+}
+
+mutation UpdateGroup($objectId: String!, $chatId: String!, $name: String!, $ownerId: String!, $isDeleted: Boolean!, $createdAt: Int!, $updatedAt: Int!) {
+  updateGroup(objectId: $objectId, chatId: $chatId, name: $name, ownerId: $ownerId, isDeleted: $isDeleted, createdAt: $createdAt, updatedAt: $updatedAt) {
+    objectId, chatId, name, ownerId, isDeleted, createdAt, updatedAt
+  }
+}
+
+## Member
+mutation InsertMember($objectId: String!, $chatId: String!, $userId: String!, $isActive: Boolean!, $createdAt: Int!, $updatedAt: Int!) {
+  insertMember(objectId: $objectId, chatId: $chatId, userId: $userId, isActive: $isActive, createdAt: $createdAt, updatedAt: $updatedAt) {
+    objectId, chatId, userId, isActive, createdAt, updatedAt
+  }
+}
+
+mutation UpdateMember($objectId: String!, $chatId: String!, $userId: String!, $isActive: Boolean!, $createdAt: Int!, $updatedAt: Int!) {
+  updateMember(objectId: $objectId, chatId: $chatId, userId: $userId, isActive: $isActive, createdAt: $createdAt, updatedAt: $updatedAt) {
+    objectId, chatId, userId, isActive, createdAt, updatedAt
+  }
+}
+
+## Mutation
+mutation InsertMessage($objectId: String!, $chatId: String!, $userId: String!, $userFullname: String!, $userInitials: String!, $userPictureAt: Int!, $type: String!, $text: String!, $photoWidth: Int!, $photoHeight: Int!, $videoDuration: Int!, $audioDuration: Int!, $latitude: Float!, $longitude: Float!, $isMediaQueued: Boolean!, $isMediaFailed: Boolean!, $isDeleted: Boolean!, $createdAt: Int!, $updatedAt: Int!) {
+  insertMessage(objectId: $objectId, chatId: $chatId, userId: $userId, userFullname: $userFullname, userInitials: $userInitials, userPictureAt: $userPictureAt, type: $type, text: $text, photoWidth: $photoWidth, photoHeight: $photoHeight, videoDuration: $videoDuration, audioDuration: $audioDuration, latitude: $latitude, longitude: $longitude, isMediaQueued: $isMediaQueued, isMediaFailed: $isMediaFailed, isDeleted: $isDeleted, createdAt: $createdAt, updatedAt: $updatedAt) {
+    objectId, chatId, userId, userFullname, userInitials, userPictureAt, type, text, photoWidth, photoHeight, videoDuration, audioDuration, latitude, longitude, isMediaQueued, isMediaFailed, isDeleted, createdAt, updatedAt
+  }
+}
+
+mutation UpdateMessage($objectId: String!, $chatId: String!, $userId: String!, $userFullname: String!, $userInitials: String!, $userPictureAt: Int!, $type: String!, $text: String!, $photoWidth: Int!, $photoHeight: Int!, $videoDuration: Int!, $audioDuration: Int!, $latitude: Float!, $longitude: Float!, $isMediaQueued: Boolean!, $isMediaFailed: Boolean!, $isDeleted: Boolean!, $createdAt: Int!, $updatedAt: Int!) {
+  updateMessage(objectId: $objectId, chatId: $chatId, userId: $userId, userFullname: $userFullname, userInitials: $userInitials, userPictureAt: $userPictureAt, type: $type, text: $text, photoWidth: $photoWidth, photoHeight: $photoHeight, videoDuration: $videoDuration, audioDuration: $audioDuration, latitude: $latitude, longitude: $longitude, isMediaQueued: $isMediaQueued, isMediaFailed: $isMediaFailed, isDeleted: $isDeleted, createdAt: $createdAt, updatedAt: $updatedAt) {
+    objectId, chatId, userId, userFullname, userInitials, userPictureAt, type, text, photoWidth, photoHeight, videoDuration, audioDuration, latitude, longitude, isMediaQueued, isMediaFailed, isDeleted, createdAt, updatedAt
+  }
+}
+
+## Single
+mutation InsertSingle($objectId: String!, $chatId: String!, $userId1: String!, $fullname1: String!, $initials1: String!, $pictureAt1: Int!, $userId2: String!, $fullname2: String!, $initials2: String!, $pictureAt2: Int!, $createdAt: Int!, $updatedAt: Int!) {
+  insertSingle(objectId: $objectId, chatId: $chatId, userId1: $userId1, fullname1: $fullname1, initials1: $initials1, pictureAt1: $pictureAt1, userId2: $userId2, fullname2: $fullname2, initials2: $initials2, pictureAt2: $pictureAt2, createdAt: $createdAt, updatedAt: $updatedAt) {
+    objectId, chatId, userId1, fullname1, initials1, pictureAt1, userId2, fullname2, initials2, pictureAt2, createdAt, updatedAt
+  }
+}
+
+mutation UpdateSingle($objectId: String!, $chatId: String!, $userId1: String!, $fullname1: String!, $initials1: String!, $pictureAt1: Int!, $userId2: String!, $fullname2: String!, $initials2: String!, $pictureAt2: Int!, $createdAt: Int!, $updatedAt: Int!) {
+  updateSingle(objectId: $objectId, chatId: $chatId, userId1: $userId1, fullname1: $fullname1, initials1: $initials1, pictureAt1: $pictureAt1, userId2: $userId2, fullname2: $fullname2, initials2: $initials2, pictureAt2: $pictureAt2, createdAt: $createdAt, updatedAt: $updatedAt) {
+    objectId, chatId, userId1, fullname1, initials1, pictureAt1, userId2, fullname2, initials2, pictureAt2, createdAt, updatedAt
+  }
+}

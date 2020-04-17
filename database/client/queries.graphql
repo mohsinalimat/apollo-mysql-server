@@ -1,0 +1,55 @@
+## Friend
+query Friends($userId: String!) {
+  objects: friends(userId: $userId) {
+    objectId, userId, friendId, isDeleted, createdAt, updatedAt
+  }
+}
+
+## Person
+query People($updatedAt: Int!) {
+  objects: people(updatedAt: $updatedAt) {
+    email, phone, firstname, lastname, fullname, country, location, pictureAt, status, keepMedia, networkPhoto, networkVideo, networkAudio, wallpaper, loginMethod, oneSignalId, lastActive, lastTerminate, createdAt, updatedAt
+  }  
+}
+
+## Blocked
+query Blockeds($blockedId: String, $blockerId: String) {
+  objects: blockeds(blockedId: $blockedId, blockerId: $blockerId) {
+    objectId, blockerId, blockedId, isDeleted, createdAt, updatedAt
+  }
+}
+
+## Detail
+query Details($chatIds: [String]!) {
+  objects: details(chatIds: $chatIds) {
+    objectId, chatId, userId, typing, lastRead, mutedUntil, isDeleted, isArchived, createdAt, updatedAt
+  }
+}
+
+## Group
+query Groups($chatIds: [String]!) {
+  objects: groups(chatIds: $chatIds) {
+    objectId, chatId, name, ownerId, isDeleted, createdAt, updatedAt
+  }
+}
+
+## Member
+query Members($chatIds: [String], $userIds: [String] ) {
+  objects: members(chatIds: $chatIds, userIds: $userIds) {
+    objectId, chatId, userId, isActive, createdAt, updatedAt
+  }
+}
+
+## Message
+query Messages($chatIds: [String]!, $updatedAt: Int!) {
+  objects: messages(chatIds: $chatIds, updatedAt: $updatedAt) {
+    objectId, chatId, userId, userFullname, userInitials, userPictureAt, type, text, photoWidth, photoHeight, videoDuration, audioDuration, latitude, longitude, isMediaQueued, isMediaFailed, isDeleted, createdAt, updatedAt
+  }
+}
+
+## Single
+query Singles($userId1: String, $userId2: String) {
+  objects: singles(userId1: $userId1, userId2: $userId2) {
+    objectId, chatId, userId1, fullname1, initials1, pictureAt1, userId2, fullname2, initials2, pictureAt2, createdAt, updatedAt
+  }
+}
