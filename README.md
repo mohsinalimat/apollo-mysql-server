@@ -1,4 +1,4 @@
-# Related Code Messenger Server for MySQL
+# Apollo MySQL Server
 
 Node.js server with Apollo GraphQL and MySQL.
 
