@@ -37,7 +37,7 @@ Node.js server with Apollo GraphQL and MySQL.
 - Reload privilege tables now? - `Yes`
 
 23. Enter MySQL console using<br>`mysql -u root -p`
-24. Enter the MySQL password provided earlier<br>`Related123`
+24. Enter the MySQL password provided recently<br>`Related123`
 25. Create the database using<br>`CREATE DATABASE messenger;`
 26. Create remote user using<br>`CREATE USER 'remote'@'%' IDENTIFIED BY 'Related123';`
 27. Grant privileges to remote user with<br>`GRANT ALL PRIVILEGES ON *.* TO 'remote'@'%' WITH GRANT OPTION;`
